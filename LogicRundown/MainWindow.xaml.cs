@@ -12,7 +12,6 @@ namespace LogicRundown
     {
         //variables
         private int AlphaValue = 0;
-
         private int BetaValue = 0;
 
         //property
@@ -85,7 +84,7 @@ namespace LogicRundown
                     LogicCanvasTwo.Background = new SolidColorBrush(Colors.Red);
                 }
 
-                if ((InvertBoolValue((Inverter), (Math.Pow(AlphaValue, BetaValue) > 200 && Math.Pow(AlphaValue, BetaValue) < 300))))
+                if (LogicCompares.ComparePower(AlphaValue, BetaValue, Inverter))
                 {
                     LogicCanvasThree.Background = new SolidColorBrush(Colors.Green);
                 }

@@ -18,5 +18,10 @@ namespace LogicRundown
         {
             return (shouldInvert ? !assessment : assessment);
         }
+
+        internal static bool ComparePower(int AlphaValue, int BetaValue, bool Inverter)
+        {
+            return (InvertBoolValue((Inverter), (Math.Pow(AlphaValue, BetaValue) > 200 && Math.Pow(AlphaValue, BetaValue) < 300)));
+        }
     }
 }
